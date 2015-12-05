@@ -41,15 +41,21 @@ gulp.task('concat:css', function (){
 
 gulp.task('concat:js', function (){
   return gulp.src([
+    'src/assets/js/jquery.min.js',
     'src/assets/js/**/*.js'
   ])
   .pipe( plugins.concat('all.js') )
   .pipe( gulp.dest('.tmp/assets/js') )
 });
 
-gulp.task('copy', ['clean'], function() {
-  return gulp.src(['src/*.hbs', './package.json'])
-  .pipe( gulp.dest( '.tmp/') );
+
+gulp.task('copy', ['clean'], function () {
+  gulp.src(['src/assets/fonts/**/*'])
+    .pipe( gulp.dest( '.tmp/assets/fonts') );
+  gulp.src(['./package.json'])
+    .pipe( gulp.dest( '.tmp/') );
+  gulp.src(['src/*.hbs'])
+    .pipe( gulp.dest( '.tmp/') );
 });
 
 gulp.task('inject:prod', ['concat:css', 'concat:js'], function (){
