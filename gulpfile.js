@@ -87,7 +87,7 @@ gulp.task('bump:patch', function (){
 
 gulp.task('build', ['copy', 'inject:prod', 'img:optimize'], function () {
   return gulp.src('.tmp/**/*')
-    .pipe( plugins.tar('build-v' + pkg.version + '.tar') )
+    .pipe( plugins.tar('build-latest.tar') )
     .pipe( plugins.gzip() )
     .pipe( gulp.dest('./dist') );
 });
