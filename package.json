@@ -3,19 +3,16 @@
   "version": "2.0.0",
   "description": "Relative Media Ghost Blog",
   "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RelativeMedia/blog.relative.media.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Mike DeVita <mike@relative.media>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/RelativeMedia/blog.relative.media/issues"
   },
-  "homepage": "https://github.com/RelativeMedia/blog.relative.media#readme",
+  "homepage": "https://blog.relative.media",
   "devDependencies": {
     "event-stream": "^3.3.2",
     "gulp": "^3.9.0",
