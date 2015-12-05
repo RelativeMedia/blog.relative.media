@@ -1,13 +1,10 @@
-# boostrap
+# Deploying The Theme
 
-A starter Ghost theme with Twitter Bootstrap integration. This theme has only bare bones in it to allow you to quickly develop your own theme. Twitter Bootstrap 3 has been included, and all the components, styles, etc… are available for use. 
-
-# misc
-
-author: matt lambert
-
-web: [cardeo.ca](http://cardeo.ca)
-
-twitter: [@cardeo](http://twitter.com/cardeo)
-
-
+```bash
+cd /var/www/blog.relative.media/content/themes && \
+wget https://github.com/RelativeMedia/blog.relative.media/raw/master/dist/build-latest.tar.gz && \
+rm -rf -y relativemedia/* && \
+tar -zxvf build-latest.tar.gz -C relativemedia/ && \
+rm -rf build-latest.tar.gz &&
+pm2 restart blog.relative.media;
+```
