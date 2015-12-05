@@ -47,13 +47,8 @@ pre{
   margin: 0 auto -260px;
 }
 
-@media(min-width:767px) {
-  p {
-    margin: 0 0 35px;
-    font-size: 18px;
-    line-height: 36px;
-    text-align: left;
-  }
+.navbar-custom .nav li a {
+  color: #333;
 }
 
 a {
@@ -85,6 +80,21 @@ a:focus {
 .navbar, .navbar .navbar-header, .navbar .collapse{
   min-height: 52px;
 }
+
+.navbar-brand {
+  color: #333332 !important;
+  text-indent: -9999px;
+  width: 165px;
+  height: 50px;
+  background-size: 165px 50px;
+  background: url("/assets/img/logo_light_165x50.png") no-repeat;
+  display: block;
+  float: left;
+  margin-right: 14px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
 .navbar a {
   border: none;
 }
@@ -108,6 +118,11 @@ a:focus {
   background-color: none !important;
 }
 
+.navbar-custom {
+  border-bottom: 6px solid #EFEFEF;
+  padding-bottom: 16px;
+}
+
 .navbar-custom a {
   color: #fff;
 }
@@ -116,22 +131,27 @@ a:focus {
   -webkit-transition: background .3s ease-in-out;
   -moz-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out;
-  color: rgba(255, 255, 255, 0.5);
+  color: #333;
   font-family: 'Montserrat', sans-serif;
+  border-bottom: 2px solid #FFF;
 }
 
 .navbar-custom .nav li a:hover{
   outline: 0;
   background: none;
-  color: #fff !important;
+  color: #41B4DD   !important;
   border-bottom: 2px solid #41B4DD;
+}
+
+.top-nav-collapse .nav li a {
+  border-bottom: 2px solid #FFF;
 }
 
 .top-nav-collapse .nav li a:hover{
   outline: 0;
   background: none;
   color: #41B4DD !important;
-  border-bottom: none !important;
+  border-bottom: 2px solid #41B4DD;
 }
 
 .navbar-custom .nav li.active a {
@@ -192,17 +212,9 @@ a:focus {
   }
 
   .navbar-brand {
-    color: #333332 !important;
-    text-indent: -9999px;
-    width: 165px;
-    height: 50px;
-    background-size: 165px 50px;
-    background: url("/assets/img/logo_light_165x50.png") no-repeat;
-    display: block;
-    float: left;
-    margin-right: 14px;
+    margin-left: 0;
+    margin-top: 0;
   }
-
   .navbar #contact-me {
 
     position: relative;
@@ -429,4 +441,18 @@ a:focus {
 .page-header {
 	padding-bottom: 0.5em;
 	margin: 0 0 1em 0;
+}
+
+
+@media(min-width:767px) {
+  p {
+    margin: 0 0 35px;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: left;
+  }
+  .navbar-custom .nav li a {
+    color: #FFF;
+    border-bottom: 0;
+  }
 }

@@ -60,7 +60,11 @@ gulp.task('copy', ['clean'], function () {
 
 gulp.task('inject', function (){
   var target = gulp.src('./default.hbs');
-  var sources = gulp.src(['./assets/css/**/*.css', './assets/js/**/*.js']);
+  var sources = gulp.src([
+    './assets/css/**/*.css',
+    './assets/js/jquery.min.js',
+    './assets/js/**/*.js'
+  ]);
   return target.pipe( plugins.inject(sources, {
     relative: true,
     addRootSlash: true
