@@ -58,6 +58,16 @@ gulp.task('copy', ['clean'], function () {
     .pipe( gulp.dest( '.tmp/') );
 });
 
+gulp.task('inject', function (){
+  var target = gulp.src('./default.hbs');
+  var sources = gulp.src(['./assets/css/**/*.css', './assets/js/**/*.js']);
+  return target.pipe( plugins.inject(sources, {
+    relative: true,
+    addRootSlash: true
+  }) )
+  .pipe(gulp.dest('.'));
+});
+
 gulp.task('inject:prod', ['concat:css', 'concat:js'], function (){
   var target = gulp.src('.tmp/default.hbs');
   var sources = gulp.src(['.tmp/assets/css/**/*.css', '.tmp/assets/js/**/*.js']);
