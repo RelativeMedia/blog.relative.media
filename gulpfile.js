@@ -48,7 +48,7 @@ gulp.task('concat:js', function (){
 });
 
 gulp.task('copy', ['clean'], function() {
-  return gulp.src(['src/*.hbs'])
+  return gulp.src(['src/*.hbs', './package.json'])
   .pipe( gulp.dest( '.tmp/') );
 });
 
