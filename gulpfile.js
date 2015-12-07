@@ -36,6 +36,7 @@ gulp.task('concat:css', function (){
   ])
   .pipe( plugins.concatCss('all.css') )
   .pipe( plugins.cssmin() )
+  .pipe( plugins.rev() )
   .pipe( gulp.dest('.tmp/assets/css/') )
 });
 
@@ -45,6 +46,7 @@ gulp.task('concat:js', function (){
     './assets/js/**/*.js'
   ])
   .pipe( plugins.concat('all.js') )
+  .pipe( plugins.rev() )
   .pipe( gulp.dest('.tmp/assets/js') )
 });
 
