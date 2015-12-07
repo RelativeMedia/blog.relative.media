@@ -1,3 +1,12 @@
+# Building the Theme
+
+```
+gulp bump:[major|minor|patch]
+gulp build
+git ...
+git push...
+```
+
 # Deploying The Theme
 
 ```bash
