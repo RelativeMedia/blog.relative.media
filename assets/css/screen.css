@@ -229,8 +229,17 @@ a:focus {
     margin-left: 0;
     margin-top: 0;
   }
-  .navbar #contact-me {
 
+  #disqus-comments {
+    border-left: 1px solid #b1b1b1;
+    padding-left: 4px;
+  }
+
+  #disqus {
+    margin-bottom:80px;
+  }
+
+  .navbar #contact-me {
     position: relative;
     background: #BE1E2D;
     padding: 7px 15px;
